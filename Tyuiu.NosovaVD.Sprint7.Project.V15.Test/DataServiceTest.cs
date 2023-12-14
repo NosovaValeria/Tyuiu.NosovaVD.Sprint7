@@ -7,8 +7,10 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidSumm()
         {
+            DataService ds = new DataService();
+
         }
     }
 }
