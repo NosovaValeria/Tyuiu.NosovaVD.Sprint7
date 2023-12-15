@@ -33,6 +33,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.labelSubjectArea_NVD = new System.Windows.Forms.Label();
             this.panelLeft_NVD = new System.Windows.Forms.Panel();
             this.groupBoxInput_NVD = new System.Windows.Forms.GroupBox();
+            this.buttonDone_NVD = new System.Windows.Forms.Button();
             this.textBoxNumber_NVD = new System.Windows.Forms.TextBox();
             this.panelRight_NVD = new System.Windows.Forms.Panel();
             this.dataGridViewOut_NVD = new System.Windows.Forms.DataGridView();
@@ -43,7 +44,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.Post = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Term = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonDone_NVD = new System.Windows.Forms.Button();
+            this.buttonReport_NVD = new System.Windows.Forms.Button();
             this.panelTop_NVD.SuspendLayout();
             this.panelLeft_NVD.SuspendLayout();
             this.groupBoxInput_NVD.SuspendLayout();
@@ -83,12 +84,22 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             // 
             this.groupBoxInput_NVD.Controls.Add(this.buttonDone_NVD);
             this.groupBoxInput_NVD.Controls.Add(this.textBoxNumber_NVD);
-            this.groupBoxInput_NVD.Location = new System.Drawing.Point(16, 15);
+            this.groupBoxInput_NVD.Location = new System.Drawing.Point(12, 6);
             this.groupBoxInput_NVD.Name = "groupBoxInput_NVD";
-            this.groupBoxInput_NVD.Size = new System.Drawing.Size(289, 357);
+            this.groupBoxInput_NVD.Size = new System.Drawing.Size(309, 381);
             this.groupBoxInput_NVD.TabIndex = 1;
             this.groupBoxInput_NVD.TabStop = false;
             this.groupBoxInput_NVD.Text = "Ввод данных";
+            // 
+            // buttonDone_NVD
+            // 
+            this.buttonDone_NVD.Location = new System.Drawing.Point(183, 339);
+            this.buttonDone_NVD.Name = "buttonDone_NVD";
+            this.buttonDone_NVD.Size = new System.Drawing.Size(120, 36);
+            this.buttonDone_NVD.TabIndex = 1;
+            this.buttonDone_NVD.Text = "Выполнить";
+            this.buttonDone_NVD.UseVisualStyleBackColor = true;
+            this.buttonDone_NVD.Click += new System.EventHandler(this.buttonDone_NVD_Click);
             // 
             // textBoxNumber_NVD
             // 
@@ -100,6 +111,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             // 
             // panelRight_NVD
             // 
+            this.panelRight_NVD.Controls.Add(this.buttonReport_NVD);
             this.panelRight_NVD.Controls.Add(this.dataGridViewOut_NVD);
             this.panelRight_NVD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRight_NVD.Location = new System.Drawing.Point(327, 54);
@@ -118,7 +130,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.Post,
             this.Salary,
             this.Term});
-            this.dataGridViewOut_NVD.Location = new System.Drawing.Point(25, 55);
+            this.dataGridViewOut_NVD.Location = new System.Drawing.Point(25, 15);
             this.dataGridViewOut_NVD.Name = "dataGridViewOut_NVD";
             this.dataGridViewOut_NVD.RowHeadersVisible = false;
             this.dataGridViewOut_NVD.RowHeadersWidth = 51;
@@ -182,15 +194,15 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.Term.ReadOnly = true;
             this.Term.Width = 125;
             // 
-            // buttonDone_NVD
+            // buttonReport_NVD
             // 
-            this.buttonDone_NVD.Location = new System.Drawing.Point(163, 315);
-            this.buttonDone_NVD.Name = "buttonDone_NVD";
-            this.buttonDone_NVD.Size = new System.Drawing.Size(120, 36);
-            this.buttonDone_NVD.TabIndex = 1;
-            this.buttonDone_NVD.Text = "Выполнить";
-            this.buttonDone_NVD.UseVisualStyleBackColor = true;
-            this.buttonDone_NVD.Click += new System.EventHandler(this.buttonDone_NVD_Click);
+            this.buttonReport_NVD.Location = new System.Drawing.Point(425, 353);
+            this.buttonReport_NVD.Name = "buttonReport_NVD";
+            this.buttonReport_NVD.Size = new System.Drawing.Size(203, 34);
+            this.buttonReport_NVD.TabIndex = 1;
+            this.buttonReport_NVD.Text = "Построить сводный отчет";
+            this.buttonReport_NVD.UseVisualStyleBackColor = true;
+            this.buttonReport_NVD.Click += new System.EventHandler(this.buttonReport_NVD_Click);
             // 
             // FormMain
             // 
@@ -233,6 +245,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
         private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
         private System.Windows.Forms.DataGridViewTextBoxColumn Term;
         private System.Windows.Forms.Button buttonDone_NVD;
+        private System.Windows.Forms.Button buttonReport_NVD;
     }
 }
 
