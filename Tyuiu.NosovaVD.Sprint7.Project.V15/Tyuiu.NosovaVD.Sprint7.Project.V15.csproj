@@ -75,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,6 +95,12 @@
       <Project>{eec8359e-1102-4b05-9c75-28a4cc2ab582}</Project>
       <Name>Tyuiu.NosovaVD.Sprint7.Project.V15.Lib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_go.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
