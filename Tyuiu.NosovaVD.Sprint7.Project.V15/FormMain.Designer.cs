@@ -34,9 +34,8 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.labelSubjectArea_NVD = new System.Windows.Forms.Label();
             this.panelLeft_NVD = new System.Windows.Forms.Panel();
             this.groupBoxInput_NVD = new System.Windows.Forms.GroupBox();
-            this.buttonSaveFile_NVD = new System.Windows.Forms.Button();
-            this.buttonOpenFile_NVD = new System.Windows.Forms.Button();
             this.panelRight_NVD = new System.Windows.Forms.Panel();
+            this.buttonChange_NVD = new System.Windows.Forms.Button();
             this.buttonReport_NVD = new System.Windows.Forms.Button();
             this.dataGridViewOut_NVD = new System.Windows.Forms.DataGridView();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +48,9 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.openFileDialog_NVD = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogExcel_NVD = new System.Windows.Forms.SaveFileDialog();
             this.toolTip_NVD = new System.Windows.Forms.ToolTip(this.components);
-            this.buttonChange_NVD = new System.Windows.Forms.Button();
+            this.buttonSaveFile_NVD = new System.Windows.Forms.Button();
+            this.buttonOpenFile_NVD = new System.Windows.Forms.Button();
+            this.buttonHelp_NVD = new System.Windows.Forms.Button();
             this.panelTop_NVD.SuspendLayout();
             this.panelLeft_NVD.SuspendLayout();
             this.groupBoxInput_NVD.SuspendLayout();
@@ -59,6 +60,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             // 
             // panelTop_NVD
             // 
+            this.panelTop_NVD.Controls.Add(this.buttonHelp_NVD);
             this.panelTop_NVD.Controls.Add(this.labelSubjectArea_NVD);
             this.panelTop_NVD.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_NVD.Location = new System.Drawing.Point(0, 0);
@@ -96,29 +98,6 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.groupBoxInput_NVD.TabStop = false;
             this.groupBoxInput_NVD.Text = "Ввод данных";
             // 
-            // buttonSaveFile_NVD
-            // 
-            this.buttonSaveFile_NVD.Enabled = false;
-            this.buttonSaveFile_NVD.Image = global::Tyuiu.NosovaVD.Sprint7.Project.V15.Properties.Resources.page_save;
-            this.buttonSaveFile_NVD.Location = new System.Drawing.Point(140, 418);
-            this.buttonSaveFile_NVD.Name = "buttonSaveFile_NVD";
-            this.buttonSaveFile_NVD.Size = new System.Drawing.Size(77, 57);
-            this.buttonSaveFile_NVD.TabIndex = 3;
-            this.toolTip_NVD.SetToolTip(this.buttonSaveFile_NVD, "Сохранить данные в файл в формате CSV");
-            this.buttonSaveFile_NVD.UseVisualStyleBackColor = true;
-            this.buttonSaveFile_NVD.Click += new System.EventHandler(this.buttonSaveFile_NVD_Click);
-            // 
-            // buttonOpenFile_NVD
-            // 
-            this.buttonOpenFile_NVD.Image = global::Tyuiu.NosovaVD.Sprint7.Project.V15.Properties.Resources.page_go;
-            this.buttonOpenFile_NVD.Location = new System.Drawing.Point(6, 416);
-            this.buttonOpenFile_NVD.Name = "buttonOpenFile_NVD";
-            this.buttonOpenFile_NVD.Size = new System.Drawing.Size(77, 60);
-            this.buttonOpenFile_NVD.TabIndex = 2;
-            this.toolTip_NVD.SetToolTip(this.buttonOpenFile_NVD, "Открыть файл для обработки данных в формате CSV");
-            this.buttonOpenFile_NVD.UseVisualStyleBackColor = true;
-            this.buttonOpenFile_NVD.Click += new System.EventHandler(this.buttonOpenFile_NVD_Click);
-            // 
             // panelRight_NVD
             // 
             this.panelRight_NVD.Controls.Add(this.buttonChange_NVD);
@@ -130,6 +109,18 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.panelRight_NVD.Size = new System.Drawing.Size(930, 499);
             this.panelRight_NVD.TabIndex = 2;
             // 
+            // buttonChange_NVD
+            // 
+            this.buttonChange_NVD.Enabled = false;
+            this.buttonChange_NVD.Location = new System.Drawing.Point(33, 448);
+            this.buttonChange_NVD.Name = "buttonChange_NVD";
+            this.buttonChange_NVD.Size = new System.Drawing.Size(184, 44);
+            this.buttonChange_NVD.TabIndex = 4;
+            this.buttonChange_NVD.Text = "Редактировать данные";
+            this.toolTip_NVD.SetToolTip(this.buttonChange_NVD, "Редактировать таблицу");
+            this.buttonChange_NVD.UseVisualStyleBackColor = true;
+            this.buttonChange_NVD.Click += new System.EventHandler(this.buttonChange_NVD_Click);
+            // 
             // buttonReport_NVD
             // 
             this.buttonReport_NVD.Enabled = false;
@@ -138,6 +129,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.buttonReport_NVD.Size = new System.Drawing.Size(203, 34);
             this.buttonReport_NVD.TabIndex = 1;
             this.buttonReport_NVD.Text = "Построить сводный отчет";
+            this.toolTip_NVD.SetToolTip(this.buttonReport_NVD, "Построить график по данным");
             this.buttonReport_NVD.UseVisualStyleBackColor = true;
             this.buttonReport_NVD.Click += new System.EventHandler(this.buttonReport_NVD_Click);
             // 
@@ -225,17 +217,40 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.toolTip_NVD.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip_NVD.ToolTipTitle = "Подсказка";
             // 
-            // buttonChange_NVD
+            // buttonSaveFile_NVD
             // 
-            this.buttonChange_NVD.Enabled = false;
-            this.buttonChange_NVD.Location = new System.Drawing.Point(33, 448);
-            this.buttonChange_NVD.Name = "buttonChange_NVD";
-            this.buttonChange_NVD.Size = new System.Drawing.Size(184, 44);
-            this.buttonChange_NVD.TabIndex = 4;
-            this.buttonChange_NVD.Text = "Редактировать данные";
-            this.toolTip_NVD.SetToolTip(this.buttonChange_NVD, "Редактировать таблицу");
-            this.buttonChange_NVD.UseVisualStyleBackColor = true;
-            this.buttonChange_NVD.Click += new System.EventHandler(this.buttonChange_NVD_Click);
+            this.buttonSaveFile_NVD.Enabled = false;
+            this.buttonSaveFile_NVD.Image = global::Tyuiu.NosovaVD.Sprint7.Project.V15.Properties.Resources.page_save;
+            this.buttonSaveFile_NVD.Location = new System.Drawing.Point(140, 418);
+            this.buttonSaveFile_NVD.Name = "buttonSaveFile_NVD";
+            this.buttonSaveFile_NVD.Size = new System.Drawing.Size(77, 57);
+            this.buttonSaveFile_NVD.TabIndex = 3;
+            this.toolTip_NVD.SetToolTip(this.buttonSaveFile_NVD, "Сохранить данные в файл в формате CSV");
+            this.buttonSaveFile_NVD.UseVisualStyleBackColor = true;
+            this.buttonSaveFile_NVD.Click += new System.EventHandler(this.buttonSaveFile_NVD_Click);
+            // 
+            // buttonOpenFile_NVD
+            // 
+            this.buttonOpenFile_NVD.Image = global::Tyuiu.NosovaVD.Sprint7.Project.V15.Properties.Resources.page_go;
+            this.buttonOpenFile_NVD.Location = new System.Drawing.Point(6, 416);
+            this.buttonOpenFile_NVD.Name = "buttonOpenFile_NVD";
+            this.buttonOpenFile_NVD.Size = new System.Drawing.Size(77, 60);
+            this.buttonOpenFile_NVD.TabIndex = 2;
+            this.toolTip_NVD.SetToolTip(this.buttonOpenFile_NVD, "Открыть файл для обработки данных в формате CSV");
+            this.buttonOpenFile_NVD.UseVisualStyleBackColor = true;
+            this.buttonOpenFile_NVD.Click += new System.EventHandler(this.buttonOpenFile_NVD_Click);
+            // 
+            // buttonHelp_NVD
+            // 
+            this.buttonHelp_NVD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp_NVD.Image = global::Tyuiu.NosovaVD.Sprint7.Project.V15.Properties.Resources.help;
+            this.buttonHelp_NVD.Location = new System.Drawing.Point(1113, 0);
+            this.buttonHelp_NVD.Name = "buttonHelp_NVD";
+            this.buttonHelp_NVD.Size = new System.Drawing.Size(66, 51);
+            this.buttonHelp_NVD.TabIndex = 3;
+            this.toolTip_NVD.SetToolTip(this.buttonHelp_NVD, "Сведение о программе");
+            this.buttonHelp_NVD.UseVisualStyleBackColor = true;
+            this.buttonHelp_NVD.Click += new System.EventHandler(this.buttonHelp_NVD_Click);
             // 
             // FormMain
             // 
@@ -282,6 +297,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
         private System.Windows.Forms.SaveFileDialog saveFileDialogExcel_NVD;
         private System.Windows.Forms.ToolTip toolTip_NVD;
         private System.Windows.Forms.Button buttonChange_NVD;
+        private System.Windows.Forms.Button buttonHelp_NVD;
     }
 }
 

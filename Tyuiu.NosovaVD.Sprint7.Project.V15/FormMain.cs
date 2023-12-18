@@ -38,65 +38,79 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
 
         private void buttonOpenFile_NVD_Click(object sender, EventArgs e)
         {
-            openFileDialog_NVD.ShowDialog();
-            openFilePath = openFileDialog_NVD.FileName;
-            arrayValues = ds.LoadFromFileData(openFilePath);
-            dataGridViewOut_NVD.Rows.Clear();
-
-            rows = arrayValues.GetUpperBound(0) + 1;
-            colums = arrayValues.Length / rows;
-
-            dataGridViewOut_NVD.ColumnCount = colums;
-            dataGridViewOut_NVD.RowCount = rows;
-
-            
-            for (int r = 0; r < rows; r++)
+            try
             {
-                for (int c = 0; c < colums; c++)
+                openFileDialog_NVD.ShowDialog();
+                openFilePath = openFileDialog_NVD.FileName;
+                arrayValues = ds.LoadFromFileData(openFilePath);
+                dataGridViewOut_NVD.Rows.Clear();
+
+                rows = arrayValues.GetUpperBound(0) + 1;
+                colums = arrayValues.Length / rows;
+
+                dataGridViewOut_NVD.ColumnCount = colums;
+                dataGridViewOut_NVD.RowCount = rows;
+
+
+                for (int r = 0; r < rows; r++)
                 {
-                    dataGridViewOut_NVD.Rows[r].Cells[c].Value = arrayValues[r, c];
+                    for (int c = 0; c < colums; c++)
+                    {
+                        dataGridViewOut_NVD.Rows[r].Cells[c].Value = arrayValues[r, c];
+                    }
                 }
+                dataGridViewOut_NVD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                buttonSaveFile_NVD.Enabled = true;
+                buttonChange_NVD.Enabled = true;
+                buttonReport_NVD.Enabled = true;
             }
-            dataGridViewOut_NVD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            buttonSaveFile_NVD.Enabled = true;
-            buttonChange_NVD.Enabled = true;
-            buttonReport_NVD.Enabled = true;
+            catch
+            {
+                MessageBox.Show("Ошибка чтения файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonSaveFile_NVD_Click(object sender, EventArgs e)
         {
-            saveFileDialogExcel_NVD.FileName = "FileTask7.csv";
-            saveFileDialogExcel_NVD.InitialDirectory = Directory.GetCurrentDirectory();
-            saveFileDialogExcel_NVD.ShowDialog();
-
-            string path = saveFileDialogExcel_NVD.FileName;
-
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-            if (fileExists)
+            try
             {
-                File.Delete(path);
-            }
+                saveFileDialogExcel_NVD.FileName = "FileTask7.csv";
+                saveFileDialogExcel_NVD.InitialDirectory = Directory.GetCurrentDirectory();
+                saveFileDialogExcel_NVD.ShowDialog();
 
-            int rows = dataGridViewOut_NVD.RowCount;
-            int columns = dataGridViewOut_NVD.ColumnCount;
+                string path = saveFileDialogExcel_NVD.FileName;
 
-            string str = "";
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
+                FileInfo fileInfo = new FileInfo(path);
+                bool fileExists = fileInfo.Exists;
+                if (fileExists)
                 {
-                    if (j != columns - 1)
-                    {
-                        str = str + dataGridViewOut_NVD.Rows[i].Cells[j].Value + ";";
-                    }
-                    else
-                    {
-                        str = str + dataGridViewOut_NVD.Rows[i].Cells[j].Value;
-                    }
+                    File.Delete(path);
                 }
-                File.AppendAllText(path, str + Environment.NewLine, Encoding.Default);
-                str = "";
+
+                int rows = dataGridViewOut_NVD.RowCount;
+                int columns = dataGridViewOut_NVD.ColumnCount;
+
+                string str = "";
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        if (j != columns - 1)
+                        {
+                            str = str + dataGridViewOut_NVD.Rows[i].Cells[j].Value + ";";
+                        }
+                        else
+                        {
+                            str = str + dataGridViewOut_NVD.Rows[i].Cells[j].Value;
+                        }
+                    }
+                    File.AppendAllText(path, str + Environment.NewLine, Encoding.Default);
+                    str = "";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка сохранения файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -106,6 +120,12 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             {
                 dataGridViewOut_NVD.Columns[i].ReadOnly = false;
             }
+        }
+
+        private void buttonHelp_NVD_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
         }
 
         private void buttonReport_NVD_Click(object sender, EventArgs e)
