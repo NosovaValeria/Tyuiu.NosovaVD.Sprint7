@@ -11,9 +11,28 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Test
         {
             DataService ds = new DataService();
             string path = @"C:\Users\Валерия\Desktop\Task7.csv";
-            int fileExists = ds.Sum(path);
+            int res = ds.Sum(path);
             int wait = 50000;
-            Assert.AreEqual(wait, fileExists);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidCount()
+        {
+            DataService ds = new DataService();
+            string path = @"C:\Users\Валерия\Desktop\Task7.csv";
+            int res = ds.Count(path);
+            int wait = 3;
+            Assert.AreEqual(wait, res);
+        }
+        [TestMethod]
+        public void ValidSrednee()
+        {
+            DataService ds = new DataService();
+            string path = @"C:\Users\Валерия\Desktop\Task7.csv";
+            double res = ds.Srednee(path);
+            double wait = 16666.7;
+            Assert.AreEqual(wait, res);
         }
     }
 }

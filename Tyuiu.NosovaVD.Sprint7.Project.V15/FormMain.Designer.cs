@@ -35,8 +35,6 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.panelLeft_NVD = new System.Windows.Forms.Panel();
             this.groupBoxInput_NVD = new System.Windows.Forms.GroupBox();
             this.panelRight_NVD = new System.Windows.Forms.Panel();
-            this.buttonChange_NVD = new System.Windows.Forms.Button();
-            this.buttonReport_NVD = new System.Windows.Forms.Button();
             this.dataGridViewOut_NVD = new System.Windows.Forms.DataGridView();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamePerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +46,8 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.openFileDialog_NVD = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogExcel_NVD = new System.Windows.Forms.SaveFileDialog();
             this.toolTip_NVD = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonChange_NVD = new System.Windows.Forms.Button();
+            this.buttonReport_NVD = new System.Windows.Forms.Button();
             this.buttonSaveFile_NVD = new System.Windows.Forms.Button();
             this.buttonOpenFile_NVD = new System.Windows.Forms.Button();
             this.buttonHelp_NVD = new System.Windows.Forms.Button();
@@ -108,30 +108,6 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             this.panelRight_NVD.Name = "panelRight_NVD";
             this.panelRight_NVD.Size = new System.Drawing.Size(930, 499);
             this.panelRight_NVD.TabIndex = 2;
-            // 
-            // buttonChange_NVD
-            // 
-            this.buttonChange_NVD.Enabled = false;
-            this.buttonChange_NVD.Location = new System.Drawing.Point(33, 448);
-            this.buttonChange_NVD.Name = "buttonChange_NVD";
-            this.buttonChange_NVD.Size = new System.Drawing.Size(184, 44);
-            this.buttonChange_NVD.TabIndex = 4;
-            this.buttonChange_NVD.Text = "Редактировать данные";
-            this.toolTip_NVD.SetToolTip(this.buttonChange_NVD, "Редактировать таблицу");
-            this.buttonChange_NVD.UseVisualStyleBackColor = true;
-            this.buttonChange_NVD.Click += new System.EventHandler(this.buttonChange_NVD_Click);
-            // 
-            // buttonReport_NVD
-            // 
-            this.buttonReport_NVD.Enabled = false;
-            this.buttonReport_NVD.Location = new System.Drawing.Point(715, 453);
-            this.buttonReport_NVD.Name = "buttonReport_NVD";
-            this.buttonReport_NVD.Size = new System.Drawing.Size(203, 34);
-            this.buttonReport_NVD.TabIndex = 1;
-            this.buttonReport_NVD.Text = "Построить сводный отчет";
-            this.toolTip_NVD.SetToolTip(this.buttonReport_NVD, "Построить график по данным");
-            this.buttonReport_NVD.UseVisualStyleBackColor = true;
-            this.buttonReport_NVD.Click += new System.EventHandler(this.buttonReport_NVD_Click);
             // 
             // dataGridViewOut_NVD
             // 
@@ -216,6 +192,30 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             // 
             this.toolTip_NVD.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip_NVD.ToolTipTitle = "Подсказка";
+            // 
+            // buttonChange_NVD
+            // 
+            this.buttonChange_NVD.Enabled = false;
+            this.buttonChange_NVD.Image = global::Tyuiu.NosovaVD.Sprint7.Project.V15.Properties.Resources.page_edit;
+            this.buttonChange_NVD.Location = new System.Drawing.Point(727, 439);
+            this.buttonChange_NVD.Name = "buttonChange_NVD";
+            this.buttonChange_NVD.Size = new System.Drawing.Size(77, 57);
+            this.buttonChange_NVD.TabIndex = 4;
+            this.toolTip_NVD.SetToolTip(this.buttonChange_NVD, "Редактировать таблицу");
+            this.buttonChange_NVD.UseVisualStyleBackColor = true;
+            this.buttonChange_NVD.Click += new System.EventHandler(this.buttonChange_NVD_Click);
+            // 
+            // buttonReport_NVD
+            // 
+            this.buttonReport_NVD.Enabled = false;
+            this.buttonReport_NVD.Image = global::Tyuiu.NosovaVD.Sprint7.Project.V15.Properties.Resources.chart_curve_edit;
+            this.buttonReport_NVD.Location = new System.Drawing.Point(829, 439);
+            this.buttonReport_NVD.Name = "buttonReport_NVD";
+            this.buttonReport_NVD.Size = new System.Drawing.Size(77, 57);
+            this.buttonReport_NVD.TabIndex = 1;
+            this.toolTip_NVD.SetToolTip(this.buttonReport_NVD, "Построить график по данным");
+            this.buttonReport_NVD.UseVisualStyleBackColor = true;
+            this.buttonReport_NVD.Click += new System.EventHandler(this.buttonReport_NVD_Click);
             // 
             // buttonSaveFile_NVD
             // 

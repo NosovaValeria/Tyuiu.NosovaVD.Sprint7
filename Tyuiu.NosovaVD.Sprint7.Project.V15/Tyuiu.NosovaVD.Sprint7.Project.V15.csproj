@@ -117,5 +117,11 @@
   <ItemGroup>
     <None Include="Resources\user_female.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_curve_edit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
