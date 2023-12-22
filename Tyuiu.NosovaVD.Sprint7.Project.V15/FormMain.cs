@@ -16,6 +16,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
         public FormMain()
         {
             InitializeComponent();
+            openFileDialog_NVD.Filter = "Значения, разделенные запятыми(*.csv)|*.csv|Все файлы(*.*)|*.*";
         }
         DataService ds = new DataService();
         static string[,] arrayValues;
@@ -28,10 +29,10 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
 
             for (int i = 0; i < 7; i++)
             {
-                dataGridViewOut_NVD.Columns[i].Width = 65;
+                dataGridViewOut_NVD.Columns[i].Width = 85;
                 if(i >= 3)
                 {
-                    dataGridViewOut_NVD.Columns[i].Width = 85;
+                    dataGridViewOut_NVD.Columns[i].Width = 105;
                 }
             }
         }      
@@ -63,6 +64,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
                 buttonSaveFile_NVD.Enabled = true;
                 buttonChange_NVD.Enabled = true;
                 buttonReport_NVD.Enabled = true;
+                buttonAdd_NVD.Enabled = true;
             }
             catch
             {
@@ -126,6 +128,37 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
         {
             FormAbout formAbout = new FormAbout();
             formAbout.ShowDialog();
+        }
+
+        private void buttonAdd_NVD_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridViewOut_NVD.RowCount += 1;
+                string[] a = {dataGridViewOut_NVD.Rows[rows].Cells[0].Value.ToString(),
+                              dataGridViewOut_NVD.Rows[rows].Cells[1].Value.ToString(),
+                              dataGridViewOut_NVD.Rows[rows].Cells[2].Value.ToString(),
+                              dataGridViewOut_NVD.Rows[rows].Cells[3].Value.ToString(),
+                              dataGridViewOut_NVD.Rows[rows].Cells[4].Value.ToString(),
+                              dataGridViewOut_NVD.Rows[rows].Cells[5].Value.ToString(),
+                              dataGridViewOut_NVD.Rows[rows].Cells[6].Value.ToString() };
+                dataGridViewOut_NVD.Rows[rows].Cells[0].Value = rows + 1;
+                dataGridViewOut_NVD.Rows[rows].Cells[1].Value = textBoxAddName_NVD.Text;
+                dataGridViewOut_NVD.Rows[rows].Cells[2].Value = textBoxAddAdress_NVD.Text;
+                dataGridViewOut_NVD.Rows[rows].Cells[3].Value = textBoxAddPhon_NVD.Text;
+                dataGridViewOut_NVD.Rows[rows].Cells[4].Value = textBoxAddStatus_NVD.Text;
+                dataGridViewOut_NVD.Rows[rows].Cells[5].Value = textBoxAddSalary_NVD.Text;
+                dataGridViewOut_NVD.Rows[rows].Cells[6].Value = textBoxAddSrok_NVD.Text;
+                for (int i = 0; i < colums; i++)
+                {
+                    dataGridViewOut_NVD.Rows[rows - 1].Cells[i].Value = a[i];
+                }
+                rows++;
+            }
+            catch
+            {
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonReport_NVD_Click(object sender, EventArgs e)
