@@ -117,4 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelLast_NVD.Text" xml:space="preserve">
+    <value>По данным, записанным в таблице строится график, 
+который отражает Шифр договора и Сумму работ по нему.
+В блоке "Статистика" находятся данные о количестве 
+договоров организации, их сумме, средней сумме, 
+максимальной и минимальной сумме работ по договору.</value>
+  </data>
+  <data name="labelAdd_NVD.Text" xml:space="preserve">
+    <value>Для добавления новых данных необходимо ввести их
+в соответствующие поля слева от таблицы и нажать 
+кнопку "Добавить данные в таблицу". 
+!В поля "Шифр договора" и "Сумма работ по договору" 
+вводятся только цифры</value>
+  </data>
 </root>

@@ -47,17 +47,18 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             // 
             // buttonOK_NVD
             // 
+            this.buttonOK_NVD.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonOK_NVD.Location = new System.Drawing.Point(359, 181);
             this.buttonOK_NVD.Name = "buttonOK_NVD";
             this.buttonOK_NVD.Size = new System.Drawing.Size(88, 31);
             this.buttonOK_NVD.TabIndex = 5;
             this.buttonOK_NVD.Text = "Ок";
-            this.buttonOK_NVD.UseVisualStyleBackColor = true;
+            this.buttonOK_NVD.UseVisualStyleBackColor = false;
             this.buttonOK_NVD.Click += new System.EventHandler(this.buttonOK_NVD_Click);
             // 
             // pictureBoxOne_NVD
             // 
-            this.pictureBoxOne_NVD.Image = global::Tyuiu.NosovaVD.Sprint7.Project.V15.Properties.Resources.user_female;
+            this.pictureBoxOne_NVD.Image = global::Tyuiu.NosovaVD.Sprint7.Project.V15.Properties.Resources._1561909449_2632028;
             this.pictureBoxOne_NVD.Location = new System.Drawing.Point(14, 50);
             this.pictureBoxOne_NVD.Name = "pictureBoxOne_NVD";
             this.pictureBoxOne_NVD.Size = new System.Drawing.Size(76, 79);
@@ -69,7 +70,8 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 223);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(482, 223);
             this.Controls.Add(this.labelInfo_NVD);
             this.Controls.Add(this.buttonOK_NVD);
             this.Controls.Add(this.pictureBoxOne_NVD);

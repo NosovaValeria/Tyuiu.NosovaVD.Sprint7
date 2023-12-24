@@ -26,7 +26,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Lib
                 string[] line_r = lines[i].Split(';');
                 for (int j = 0; j < colums; j++)
                 {
-                    arrayValues[i, j] = line_r[j];
+                    arrayValues[i, j] = line_r[j];                
                 }
             }
             return arrayValues;
@@ -34,11 +34,11 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Lib
         public int Sum(string path)
         {
             string[,] array = LoadFromFileData(path);
-            int rows = array.GetUpperBound(0) + 1;
+            int rows = array.GetUpperBound(0)+1;
             int summ = 0;
             for (int i = 0; i < rows; i++)
             {
-                summ += Convert.ToInt32(array[i, 5]);                 
+                summ += Convert.ToInt32(array[i, 4]);                 
             }
             return summ;
         }
@@ -46,19 +46,47 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Lib
         public int Count(string path)
         {
             string[,] array = LoadFromFileData(path);
-            int rows = array.GetUpperBound(0) + 1;
+            int rows = array.GetUpperBound(0)+1;
             return rows;
         }
         public double Srednee(string path)
         {
             string[,] array = LoadFromFileData(path);
-            int rows = array.GetUpperBound(0) + 1;
+            int rows = array.GetUpperBound(0)+1;
             double summ = 0;
             for (int i = 0; i < rows; i++)
             {
-                summ += Convert.ToInt32(array[i, 5]);
+                summ += Convert.ToInt32(array[i, 4]);
             }
             return Math.Round((summ/rows), 1);
+        }
+        public double Max(string path)
+        {
+            string[,] array = LoadFromFileData(path);
+            int rows = array.GetUpperBound(0)+1;
+            double maxValue = int.MinValue;
+            for (int i = 0; i < rows; i++)
+            {
+                if (Convert.ToInt32(array[i, 4]) > maxValue)
+                {
+                    maxValue = Convert.ToInt32(array[i, 4]);
+                }
+            }
+            return maxValue;
+        }
+        public double Min(string path)
+        {
+            string[,] array = LoadFromFileData(path);
+            int rows = array.GetUpperBound(0)+1;
+            double minValue = int.MaxValue;
+            for (int i = 0; i < rows; i++)
+            {
+                if (Convert.ToInt32(array[i, 4]) < minValue)
+                {
+                    minValue = Convert.ToInt32(array[i, 4]);
+                }
+            }
+            return minValue;
         }
     }
 }

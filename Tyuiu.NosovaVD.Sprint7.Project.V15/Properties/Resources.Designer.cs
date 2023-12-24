@@ -63,6 +63,16 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1561909449_2632028 {
+            get {
+                object obj = ResourceManager.GetObject("1561909449_2632028", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chart_curve_edit {
             get {
                 object obj = ResourceManager.GetObject("chart_curve_edit", resourceCulture);
@@ -76,6 +86,16 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Properties {
         internal static System.Drawing.Bitmap help {
             get {
                 object obj = ResourceManager.GetObject("help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap information {
+            get {
+                object obj = ResourceManager.GetObject("information", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +143,19 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap user_female {
+        internal static System.Drawing.Bitmap Poisk {
             get {
-                object obj = ResourceManager.GetObject("user_female", resourceCulture);
+                object obj = ResourceManager.GetObject("Poisk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sort2 {
+            get {
+                object obj = ResourceManager.GetObject("sort2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

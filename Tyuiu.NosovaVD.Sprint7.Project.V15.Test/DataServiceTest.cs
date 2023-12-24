@@ -12,7 +12,7 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Test
             DataService ds = new DataService();
             string path = @"C:\Users\Валерия\Desktop\Task7.csv";
             int res = ds.Sum(path);
-            int wait = 50000;
+            int wait = 74000;
             Assert.AreEqual(wait, res);
         }
 
@@ -31,7 +31,25 @@ namespace Tyuiu.NosovaVD.Sprint7.Project.V15.Test
             DataService ds = new DataService();
             string path = @"C:\Users\Валерия\Desktop\Task7.csv";
             double res = ds.Srednee(path);
-            double wait = 16666.7;
+            double wait = 24666.7;
+            Assert.AreEqual(wait, res);
+        }
+        [TestMethod]
+        public void ValidMax()
+        {
+            DataService ds = new DataService();
+            string path = @"C:\Users\Валерия\Desktop\Task7.csv";
+            double res = ds.Max(path);
+            double wait = 40000;
+            Assert.AreEqual(wait, res);
+        }
+        [TestMethod]
+        public void ValidMin()
+        {
+            DataService ds = new DataService();
+            string path = @"C:\Users\Валерия\Desktop\Task7.csv";
+            double res = ds.Min(path);
+            double wait = 14000;
             Assert.AreEqual(wait, res);
         }
     }

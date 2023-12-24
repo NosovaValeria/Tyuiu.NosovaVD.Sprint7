@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Tyuiu.NosovaVD.Sprint7.Project.V15
 {
-    public partial class FormReport : Form
+    public partial class FormInfo : Form
     {
-        public FormReport()
+        public FormInfo()
         {
             InitializeComponent();
-        }
-
-        private void buttonBack_NVD_Click(object sender, EventArgs e)
-        {
-            FormMain formMain = new FormMain();
-            formMain.Show();
-            Close();
         }
     }
 }
